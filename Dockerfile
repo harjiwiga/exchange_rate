@@ -12,6 +12,7 @@ WORKDIR /code
 RUN pip install --upgrade pip
 RUN pip install pipenv
 RUN pip install psycopg2
+RUN pip install -r requirements.txt
 COPY ./Pipfile /code/Pipfile
 RUN pipenv install --deploy --system --skip-lock --dev
 
