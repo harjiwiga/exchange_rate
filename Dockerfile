@@ -8,13 +8,14 @@ ENV PYTHONUNBUFFERED 1
 # Set work directory
 WORKDIR /code
 
-# Install dependencies
-RUN pip install --upgrade pip
-RUN pip install pipenv
-RUN pip install psycopg2
-RUN pip install -r requirements.txt
-COPY ./Pipfile /code/Pipfile
-RUN pipenv install --deploy --system --skip-lock --dev
-
 # Copy project
 COPY . /code/
+
+# Install dependencies
+RUN pip3 install --upgrade pip
+RUN pip3 install pipenv
+RUN pip3 install psycopg2
+RUN pip3 install -r requirements.txt
+#COPY ./Pipfile /code/Pipfile
+RUN pipenv install --deploy --system --skip-lock --dev
+

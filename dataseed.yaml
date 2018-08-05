@@ -1,0 +1,173 @@
+- model : exchangerateapp.Currency
+  pk: IDR
+  fields: 
+    currency_code: IDR
+    currency_name: Indonesian Rupiah
+
+- model : exchangerateapp.Currency
+  pk: USD
+  fields: 
+    currency_name: United States Dolar
+
+- model : exchangerateapp.Currency
+  pk: GBP
+  fields: 
+    currency_name: British Pound
+
+- model : exchangerateapp.Currency
+  pk: JPY
+  fields: 
+    currency_name: Japan Yen
+
+#USD TO GBP
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-07-28'
+    from_currency: USD
+    to_currency: GBP
+    rate_value: 0.7622098643
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-07-29'
+    from_currency: USD
+    to_currency: GBP
+    rate_value: 0.7722098643
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-07-30'
+    from_currency: USD
+    to_currency: GBP
+    rate_value: 0.7732098643
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-07-31'
+    from_currency: USD
+    to_currency: GBP
+    rate_value: 0.7622098643
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-08-01'
+    from_currency: USD
+    to_currency: GBP
+    rate_value: 0.7671080786
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-08-02'
+    from_currency: USD
+    to_currency: GBP
+    rate_value: 0.7679572495
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-08-03'
+    from_currency: USD
+    to_currency: GBP
+    rate_value: 0.7691405536
+
+#USD TO IDR
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-07-28'
+    from_currency: USD
+    to_currency: IDR
+    rate_value: 14441.7137442024
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-07-29'
+    from_currency: USD
+    to_currency: IDR
+    rate_value: 14485.5691777423
+    
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-07-30'
+    from_currency: USD
+    to_currency: IDR
+    rate_value: 14485.5360123306
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-07-31'
+    from_currency: USD
+    to_currency: IDR
+    rate_value: 14495.1470905164
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-08-01'
+    from_currency: USD
+    to_currency: IDR
+    rate_value: 14497.1470905164
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-08-02'
+    from_currency: USD
+    to_currency: IDR
+    rate_value: 14498.1470905164
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-08-03'
+    from_currency: USD
+    to_currency: IDR
+    rate_value: 14495.5470905164
+
+#USD TO JPY
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-07-28'
+    from_currency: USD
+    to_currency: JPY
+    rate_value: 111.7314838354
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-07-29'
+    from_currency: USD
+    to_currency: JPY
+    rate_value: 111.5314838354
+    
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-07-30'
+    from_currency: USD
+    to_currency: JPY
+    rate_value: 111.4314838354
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-07-31'
+    from_currency: USD
+    to_currency: JPY
+    rate_value: 111.3314838354
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-08-01'
+    from_currency: USD
+    to_currency: JPY
+    rate_value: 111.4646068812
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-08-02'
+    from_currency: USD
+    to_currency: JPY
+    rate_value: 111.2314838354
+
+- model : exchangerateapp.Exchangerate
+  fields: 
+    date: '2018-08-03'
+    from_currency: USD
+    to_currency: JPY
+    rate_value: 111.2413909673
+
+
+
