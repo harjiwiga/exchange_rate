@@ -20,12 +20,13 @@ from exchangerateapp import views
 
 from rest_framework.urlpatterns import format_suffix_patterns
 
-
 urlpatterns = [
 
-    url(r'^exchangerate/$', views.test_get,name='test_get'),
-    url(r'^exchangerate/create/$', views.crate_exchange_rate,name='create'),
-    url(r'^exchangerate/get_exchange_track/$', views.GetExchangeLIst.get_exchange_track,name='get_exchange_track'),
+    url(r'^exchangerate/$', views.test_get, name='test_get'),
+    url(r'^exchangerate/create/$', views.crate_exchange_rate, name='create'),
+    url(r'^exchangerate/get_exchange_track/$', views.GetExchangeLIst.get_exchange_track, name='get_exchange_track'),
+    url(r'^exchangerate/get_exchange_average/$', views.GetExchangeLIst.get_exchange_average,
+        name='get_exchange_average'),
     # url(r'^exchangeRate/(?P<request>[\w-]+)', CreateView.test_get(),name="hello"),
 ]
 

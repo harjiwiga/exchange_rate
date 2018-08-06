@@ -12,11 +12,13 @@ class CurrencySerializer(serializers.ModelSerializer):
 
 
 class ExchangeRateSerializer(serializers.ModelSerializer):
-
+    # average_val = serializers.SerializerMethodField()
     class Meta:
         model = ExchangeRate()
         fields = ('id', 'date', 'from_currency', 'to_currency', 'rate_value')
-
+    # def get_average_val(self,obj):
+    #     print(obj)
+    #     return obj
 
 class ExchangeRateListSerializer(serializers.ListSerializer):
     def create(self, validated_data):

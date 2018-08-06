@@ -1,0 +1,144 @@
+{
+	"variables": [],
+	"info": {
+		"name": "exchange_rate_api",
+		"_postman_id": "e3c272fd-b802-c7a9-e0d5-a49b9b21cde0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test_exchange",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8000/exchangerate/?q=test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"exchangerate",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "test",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create_new_exchange_rate_data",
+			"request": {
+				"url": "http://localhost:8000/exchangerate/create/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"date\":\"2018-08-06\",\n\t\"from_currency\":\"USD\",\n\t\"to_currency\":\"IDR\",\n\t\"rate_value\":\"14500.138473\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetExchangeTrack",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8000/exchangerate/get_exchange_track/?date=2018-08-01&offset=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"exchangerate",
+						"get_exchange_track",
+						""
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2018-08-01",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "offset",
+							"value": "6",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get_average",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8000/exchangerate/get_exchange_average/?from_currency=USD&to_currency=IDR&offset=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"exchangerate",
+						"get_exchange_average",
+						""
+					],
+					"query": [
+						{
+							"key": "from_currency",
+							"value": "USD",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "to_currency",
+							"value": "IDR",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "offset",
+							"value": "7",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

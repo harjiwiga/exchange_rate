@@ -81,15 +81,15 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'HOST': 'db',#'localhost', # set in docker-compose.yml
+        'HOST': 'db',#db'localhost', # set in docker-compose.yml
         'PORT': 5432 # default postgres port
     }
 }
 
 # data seed
-# FIXTURE_DIRS = (
-#    './',
-# )
+FIXTURE_DIRS = (
+   './',
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

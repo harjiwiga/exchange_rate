@@ -17,7 +17,11 @@ class Currency(models.Model):
 
     def __str__(self):
         self.currency_code
-
+class AverageVal:
+    def __init__(self,average_val):
+        self.average_val =average_val
+    def __str__(self):
+        return self.average_val
 
 class ExchangeRate(models.Model):
 
@@ -29,8 +33,11 @@ class ExchangeRate(models.Model):
     to_currency = models.ForeignKey(Currency, on_delete=models.CASCADE, related_name='%(class)s_to_currency')
     rate_value = models.DecimalField(max_digits=18, decimal_places=10)
 
-    def __str__(self):
-        field_values = []
-        for field in self._meta.get_all_field_names():
-            field_values.append(getattr(self, field, ''))
-        return ' '.join(field_values)
+    # def __str__(self):
+    #     field_values = []
+    #     for field in self._meta.get_all_field_names():
+    #         field_values.append(getattr(self, field, ''))
+    #     return ' '.join(field_values)
+
+    # def average_val(obj):
+    #     return obj
