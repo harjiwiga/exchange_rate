@@ -142,3 +142,25 @@ class GetExchangeLIst(ListCreateAPIView):
         dict_response[i+1]=aver_var
         print(data)
         return Response(dict_response)
+
+    @api_view(['DELETE'])
+    def delete_exchange(request):
+        from_currency = request.query_params.get("from_currency")
+        if not from_currency:
+            return Response('Invalid from_currency parameter', status=status.HTTP_404_NOT_FOUND)
+        to_currency = request.query_params.get("to_currency")
+        if not to_currency:
+            return Response('Invalid from_currency parameter', status=status.HTTP_404_NOT_FOUND)
+        date = request.query_params.get("date")
+        if not date:
+            return Response('Invalid Date parameter', status=status.HTTP_404_NOT_FOUND)
+
+        import datetime
+        date_to_delete = datetime.strptime(date, "%Y-%m-%d").date()
+        from_curr = Currency.objects.get(currency_code=from_currency)
+        to_curr = Currency.objects.get(currency_code=to_currency)
+
+        from django.db.models import Q
+        ExchangeRate.objects.objects.filter(Q(from_currency=from_curr) & Q(to_currency=to_curr) & Q(date=date_to_delete)).delete()
+
+        return Response("Deleted data",status=status.HTTP_200_OK)

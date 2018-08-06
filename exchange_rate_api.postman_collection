@@ -139,6 +139,50 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "delete_exchange_rate_record",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8000/exchangerate/delete/?from_currency=USD&to_currency=IDR&date=2018-08-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"exchangerate",
+						"delete",
+						""
+					],
+					"query": [
+						{
+							"key": "from_currency",
+							"value": "USD",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "to_currency",
+							"value": "IDR",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "date",
+							"value": "2018-08-01",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
